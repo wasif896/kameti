@@ -1,0 +1,155 @@
+/* Remove scrollbar arrows in Webkit-based browsers */
+.dropdown-scrollbar::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar arrows */
+}
+
+/* Custom Scrollbar Styling */
+.dropdown-scrollbar::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-track {
+  background: #444444; /* Track background color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-thumb {
+  background: #a87f0b; /* Thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8b6a0a; /* Thumb hover color */
+}
+
+/* Firefox scrollbar styling */
+.dropdown-scrollbar {
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff transparent;
+}
+
+.dropdown-content {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.react-calendar__tile--neighboringMonth {
+  display: none; /* Hides neighboring month dates */
+}
+
+
+.highlighted {
+  border: none !important;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 14px 0px;
+  color: white;
+  position: relative;
+}
+.highlighted::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  margin-right: -30px;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  color: white !important;
+  background-color: #a87f0b2e;
+
+  border-radius: 50%;
+  opacity: 0.9;
+  border: 0.54px solid #a87f0b;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: unset;
+}
+
+.react-calendar__tile:disabled {
+  background-color: transparent;
+  color: #5d5555;
+  visibility: visible;
+}
+.react-calendar {
+  width: 80%;
+  margin: 0px auto;
+  background: transparent;
+  color: white;
+  border: none;
+}
+.react-calendar__navigation {
+  width: 94%;
+}
+.react-calendar__tile:disabled {
+  background-color: transparent;
+  color: #5d5555;
+}
+.react-calendar__navigation button:disabled {
+  color: gray;
+  background: transparent;
+  opacity: 0;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: transparent;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: white;
+}
+.react-calendar__tile--active,
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  color: white;
+  background: transparent;
+}
+.react-calendar__month-view__days__day--neighboringMonth,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__century-view__decades__decade--neighboringCentury {
+  color: white;
+}
+.button.react-calendar__tile,
+.react-calendar__month-view__days__day,
+.react-calendar__month-view__days__day--weekend,
+.highlighted,
+.react-calendar__month-view__weekdays__weekday {
+  margin: 4px 10px !important;
+  flex: 0 0 11% !important;
+}
+@media (max-width: 450px) {
+  .react-calendar {
+    width: 80%;
+    padding: 0px 10px;
+    background: transparent;
+    color: white;
+    border: none;
+  }
+  .react-calendar__month-view__weekdays__weekday {
+    padding: 4px 14px;
+    margin: 4px 5px !important;
+    display: flex;
+    justify-content: center;
+  }
+  .button.react-calendar__tile,
+  .react-calendar__month-view__days__day,
+  .react-calendar__month-view__days__day--weekend,
+  .highlighted,
+  .react-calendar__month-view__weekdays__weekday {
+    margin: 4px 5px !important;
+   
+  }
+  .react-calendar__navigation {
+    width: 100%;
+  }
+}

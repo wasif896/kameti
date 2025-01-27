@@ -1,0 +1,79 @@
+.highlighted {
+  border: none !important; 
+  border-radius:0;
+  background-color: transparent; 
+  padding: 14px 0px;
+  color:#a87f0b;
+  position: relative;
+  
+}
+.highlighted::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #1b7d19;
+  border-radius: 50%;
+}
+.react-calendar{
+  width: 80%;
+  margin-left: 10%;
+  background: transparent;
+  color: white;
+  border: none;
+}
+.react-calendar__navigation{
+  width: 90%;
+}
+.react-calendar__tile:disabled {
+  background-color: transparent;
+  color:#5d5555;
+  visibility: visible;
+}
+.react-calendar__navigation button:disabled{
+  color: gray;
+  background: transparent;
+  opacity: 0;
+  /* display: none; */
+}
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus{
+  background: transparent;
+}
+.react-calendar__month-view__days__day--weekend{
+  color: white;
+}
+.react-calendar__tile--active, .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus{
+  color: white;
+  background: transparent;
+}
+.react-calendar__month-view__days__day--neighboringMonth, .react-calendar__decade-view__years__year--neighboringDecade, .react-calendar__century-view__decades__decade--neighboringCentury{
+  color: white;
+}
+.button.react-calendar__tile, .react-calendar__month-view__days__day, .react-calendar__month-view__days__day--weekend, .highlighted, .react-calendar__month-view__weekdays__weekday {
+  margin: 4px 10px !important;
+  flex: 0 0 10% !important;
+}
+@media (max-width: 430px) {
+  .react-calendar{
+      width: 90%;
+      margin-left: 25px;
+      background: transparent;
+      color: white;
+      border: none;
+    }
+    .react-calendar__month-view__weekdays__weekday{
+      padding: 4px 14px;
+      margin: 4px 5px !important;
+      display: flex;
+      justify-content: center;
+    }
+    .button.react-calendar__tile, .react-calendar__month-view__days__day, .react-calendar__month-view__days__day--weekend, .highlighted, .react-calendar__month-view__weekdays__weekday {
+      margin: 4px 5px !important;
+      flex: 0 0 10% !important;
+  }
+
+
+}
