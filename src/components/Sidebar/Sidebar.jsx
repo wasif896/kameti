@@ -63,25 +63,25 @@ export default function Sidebar() {
       
       <img className='w-[45%] mt-5 ' src={logo} />
       <div
-  className={`w-[100%] h-[65px] mt-10 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/create', 'bg-sidecircle', '') ? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`}
-  onClick={() => handleNavigation('/create')}
+  className={`w-[100%] h-[65px] mt-10 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/dashboard', 'bg-sidecircle', '') ? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`}
+  onClick={() => handleNavigation('/dashboard')}
 >
         <div className={`w-[45px] h-[45px] rounded-[50%] justify-center flex items-center`}>
-          <img className='w-[45px]' src={create} />
+          <img className='w-[45px]' src={more} />
         </div>
-        <p className='text-white ml-4 text-[18px]'>Create</p>
+        <p className='text-white ml-4 text-[18px]'>Dasboard</p>
       </div>
-      <div className={`w-[100%] h-[65px] mt-5 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/payment', 'bg-sidecircle', '') ? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`} onClick={() => handleNavigation('/payment')}>
+      <div className={`w-[100%] h-[65px] mt-5 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/userlist', 'bg-sidecircle', '') ? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`} onClick={() => handleNavigation('/userlist')}>
         <div className={` w-[45px] h-[45px] rounded-[50%] justify-center flex items-center`}>
           <img className='w-[45px]' src={payment} />
         </div>
-        <p className='text-white ml-4 text-[18px]'>Payments</p>
+        <p className='text-white ml-4 text-[18px]'>Users List</p>
       </div>
-      <div className={`w-[100%] h-[65px] mt-5 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/history', 'bg-sidecircle', '')? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`} onClick={() => handleNavigation('/history')}>
+      <div className={`w-[100%] h-[65px] mt-5 bg-sidebar pl-7 flex items-center cursor-pointer ${isActive('/Role & Access', 'bg-sidecircle', '')? 'bg-sidecircle shadow-[inset_-2px_-9px_17.6px_0px_#0000004D]' : ''}`} onClick={() => handleNavigation('/history')}>
         <div className={`w-[45px] h-[45px] rounded-[50%] justify-center flex items-center`}>
           <img className='w-[45px]' src={file} />
         </div>
-        <p className='text-white ml-4 text-[18px]'>All Kameties</p>
+        <p className='text-white ml-4 text-[18px]'>Role & Access</p>
       </div>
       <div 
       className={`w-[100%] h-[65px] mt-5 bg-sidebar pl-7 flex items-center cursor-pointer 

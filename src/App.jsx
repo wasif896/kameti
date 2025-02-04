@@ -5,8 +5,8 @@ import Splash from "./pages/Splash/Splash";
 import Signup from "./pages/Signup/Signup";
 import SignIn from "./pages/SignIn/SignIn";
 import ForgotPassword from "./pages/Forgotpassword.jsx/ForgotPassword";
-import Create from "./pages/CreatePage/Create";
-import Payment from "./pages/PaymentPage/Payment";
+
+import UserList from "./pages/Userlist/Userlist";
 import History from "./pages/HistoryPage/History";
 import More from "./pages/More/More";
 import DetailPage from "./pages/DetailPage/DetailPage";
@@ -16,6 +16,7 @@ import MobileScreen from "./components/MobileScreen/MobileScreen";
 import EditProfile from "./pages/EditProfile/EditProfile";
 import kametiSetting from "./pages/kametiSetting/KametiSetting";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import Dashboard from "./pages/DashboardPage/Dashboard";
 
 function App() {
   const RequireAuth = ({ children }) => {
@@ -38,25 +39,17 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-    <Route path="/" element={<RequireAuthhome><Splash/></RequireAuthhome>}/>
-    <Route path="/signup" element={<RequireAuthhome><Signup/></RequireAuthhome>}/>
-    <Route path="/signin" element={<RequireAuthhome><SignIn/></RequireAuthhome>}/>
-    <Route path="/forgot" element={<RequireAuthhome><ForgotPassword/></RequireAuthhome>}/>
-    <Route path="/create">
-    <Route path="" element={<RequireAuth><Create/></RequireAuth>}/>
-    <Route path=":id" element={<RequireAuth><Create/></RequireAuth>}/>
-    </Route>
-    <Route path="/delete" element={<RequireAuth><History recordType="deleted" /></RequireAuth>}/>
-    {/* <Route path="/delete" element={<RequireAuth><DeleteKameti/></RequireAuth>}/> */}
-    <Route path="/payment" element={<RequireAuth><Payment/></RequireAuth>}/>
-    <Route path="/history" element={<RequireAuth><History recordType="all" /></RequireAuth>}/>
-    <Route path="/more" element={<RequireAuth><More/></RequireAuth>}/>
-    <Route path="/privacyPolicy" element={<RequireAuth><PrivacyPolicy/></RequireAuth>}/>
+    <Route path="/signin" element={<RequireAuthhome><Signup/></RequireAuthhome>}/>
 
-    <Route path="/allrecords" element={<RequireAuth><History recordType="all" /></RequireAuth>}/>
-    {/* <Route path="/kametisetting" element={<RequireAuth><kametiSetting/></RequireAuth>}/> */}
-    <Route path="/detail/:kametiId" element={<DetailPage/>}/>
-    <Route path="/editProfile" element={<RequireAuth><EditProfile recordType="edit" /></RequireAuth>}/>
+    <Route path="/dashboard">
+    <Route path="" element={<Dashboard/>}/>
+    </Route>
+    <Route path="/userlist" element={<UserList/>}/>
+
+
+
+    {/* <Route path="/history" element={<History/>}/>
+    <Route path="/more" element={<More/>}/> */}
 
 
 
